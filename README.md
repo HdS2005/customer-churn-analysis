@@ -1,4 +1,3 @@
-<img width="2731" height="1551" alt="dashboard_preview" src="https://github.com/user-attachments/assets/b8043198-6fd0-4db2-9b70-c723cc5a8763" />
 [README (1).md](https://github.com/user-attachments/files/30101336/README.1.md)
 <div align="center">
 
@@ -16,7 +15,7 @@
 <br>
 
 <div align="center">
-  <img src="assets/dashboard_preview.png" alt="Retently — Churn Intelligence Dashboard" width="100%">
+  <img width="2731" height="1551" alt="dashboard_preview" src="https://github.com/user-attachments/assets/b8043198-6fd0-4db2-9b70-c723cc5a8763" />
 </div>
 
 <br>

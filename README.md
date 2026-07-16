@@ -18,14 +18,6 @@
   <img width="2731" height="1551" alt="dashboard_preview" src="https://github.com/user-attachments/assets/b8043198-6fd0-4db2-9b70-c723cc5a8763" />
 </div>
 
-<div align="center">
-<img width="1400" height="860" alt="eda_collage" src="https://github.com/user-attachments/assets/db7e1118-5520-4312-bc6f-1629061ded0b" />
-</div>
-
-<div align="center">
-<img width="1600" height="620" alt="ml_showcase" src="https://github.com/user-attachments/assets/14112bf1-712d-4480-9ff6-1e686c267051" />
-</div>
-
 <br>
 
 ## ✨ What is this?

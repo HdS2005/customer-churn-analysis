@@ -1,4 +1,4 @@
-# 📉Customer Churn Intelligence
+# --> Customer Churn Intelligence
 
 **End-to-end churn analytics: data cleaning → KPIs → prediction model → live dashboard**
 
@@ -17,7 +17,7 @@
 
 <br>
 
-## ✨ What is this?
+## --> What is this?
 
 subscription behavior for **1,200 customers** to answer three questions every subscription business asks:
 
@@ -29,7 +29,7 @@ No black boxes. Every number on the dashboard traces back to a real query on the
 
 <br>
 
-## 🚀 Highlights
+## --> Highlights
 
 | | |
 |---|---|
@@ -41,7 +41,7 @@ No black boxes. Every number on the dashboard traces back to a real query on the
 
 <br>
 
-## 🖥️ Live Dashboard
+## --> Live Dashboard
 
 The dashboard isn't just a static mockup — every control actually works:
 
@@ -55,7 +55,7 @@ Open `churn_dashboard.html` directly in any browser — no server required.
 
 <br>
 
-## 📊 Key Insights
+## --> Key Insights
 
 <table>
 <tr><td>
@@ -92,7 +92,7 @@ Open `churn_dashboard.html` directly in any browser — no server required.
 
 <br>
 
-## 🧠 Churn Prediction Model
+## --> Churn Prediction Model
 
 A Logistic Regression classifier trained on genuine pre-cancellation signals only — `churn_score` and `churn_risk` were deliberately excluded since they're themselves churn-derived (no data leakage).
 
@@ -109,7 +109,7 @@ A Logistic Regression classifier trained on genuine pre-cancellation signals onl
 
 <br>
 
-## 🛠️ Tech Stack
+## --> Tech Stack
 
 **Analysis:** Python · Pandas · NumPy · Matplotlib · Seaborn · scikit-learn · Jupyter Notebook
 **Data:** SQLite (3 relational tables — customer, subscription, support)
@@ -117,7 +117,7 @@ A Logistic Regression classifier trained on genuine pre-cancellation signals onl
 
 <br>
 
-## 📁 Project Structure
+## --> Project Structure
 
 ```
 retently-churn-analysis/
@@ -131,7 +131,7 @@ retently-churn-analysis/
 
 <br>
 
-## ▶️ Getting Started
+## --> Getting Started
 
 ```bash
 # clone the repo
@@ -149,7 +149,7 @@ To view the dashboard, just open `churn_dashboard.html` in your browser — that
 
 <br>
 
-## 🗂️ Dataset Schema
+## --> Dataset Schema
 
 | Table | Description |
 |---|---|
@@ -159,7 +159,7 @@ To view the dashboard, just open `churn_dashboard.html` in your browser — that
 
 <br>
 
-## 🔮 Future Improvements
+## --> Future Improvements
 
 - [ ] Deploy the dashboard live (GitHub Pages / Vercel)
 - [ ] Add cohort-based retention curves
@@ -168,7 +168,7 @@ To view the dashboard, just open `churn_dashboard.html` in your browser — that
 
 <br>
 
-## 📬 Connect
+## --> Connect
 
 Built by **Harshdeep Singh**
 

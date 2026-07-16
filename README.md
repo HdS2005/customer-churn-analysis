@@ -1,7 +1,7 @@
 [README (1).md](https://github.com/user-attachments/files/30101336/README.1.md)
 <div align="center">
 
-# 📉 Retently — Customer Churn Intelligence
+# 📉Customer Churn Intelligence
 
 **End-to-end churn analytics: data cleaning → KPIs → prediction model → live dashboard**
 
@@ -23,7 +23,7 @@
 
 ## ✨ What is this?
 
-**Retently** analyzes subscription behavior for **1,200 customers** to answer three questions every subscription business asks:
+subscription behavior for **1,200 customers** to answer three questions every subscription business asks:
 
 1. **Who's churning, and why?** — data cleaning, feature engineering & 12 business KPIs
 2. **Who's about to churn?** — a Logistic Regression model with **87.1% accuracy**
@@ -174,15 +174,11 @@ To view the dashboard, just open `churn_dashboard.html` in your browser — that
 
 ## 📬 Connect
 
-Built by **Harsh** · Final-year CS student · Applied GenAI/LLM Developer
+Built by **Harshdeep Singh**
 
 Feel free to fork this, break it, and make it your own.
 
 <br>
-
-## 📄 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 <div align="center">
 

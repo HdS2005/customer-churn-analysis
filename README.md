@@ -1,3 +1,4 @@
+<div align="center">
 # 📉Customer Churn Intelligence
 
 **End-to-end churn analytics: data cleaning → KPIs → prediction model → live dashboard**

@@ -1,218 +1,237 @@
-# 📊 Customer Churn Analysis
+# 📊 Customer Churn Analysis & Prediction
 
-A comprehensive Exploratory Data Analysis (EDA) project that investigates customer churn behavior using Python. The goal of this project is to identify the major factors contributing to customer churn and provide actionable business recommendations to improve customer retention.
-
----
-
-## 📖 Overview
-
-Customer churn is one of the biggest challenges faced by subscription-based businesses. Losing existing customers directly impacts revenue and growth.
-
-In this project, I performed an end-to-end data analysis on a customer churn dataset to uncover patterns, identify churn drivers, and generate business insights through data visualization.
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
+![Scikit Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 
 ---
 
-## 🎯 Objectives
+## 📌 Project Overview
 
-- Analyze customer behavior and churn patterns
-- Clean and preprocess the dataset
-- Perform Exploratory Data Analysis (EDA)
-- Visualize important business metrics
-- Identify factors influencing customer churn
-- Provide business recommendations to reduce churn
+Customer churn is one of the biggest challenges for subscription-based businesses. Losing existing customers directly impacts revenue and long-term growth.
 
----
+This project analyzes customer behavior, identifies major churn drivers, visualizes business insights, and builds a machine learning model capable of predicting customer churn.
 
-## 📂 Dataset
+The complete workflow includes:
 
-**Dataset:** Customer Churn Dataset
-
-The dataset contains customer demographic information, service details, contract information, billing information, and churn status.
-
-Example Features:
-
-- Gender
-- Senior Citizen
-- Partner
-- Dependents
-- Tenure
-- Phone Service
-- Internet Service
-- Contract Type
-- Payment Method
-- Monthly Charges
-- Total Charges
-- Churn
+- Data Cleaning
+- Data Preparation
+- Exploratory Data Analysis
+- Business KPI Analysis
+- Customer Segmentation
+- Churn Prediction using Machine Learning
+- Business Recommendations
 
 ---
 
-## 🛠️ Technologies Used
+# 🎯 Business Problem
+
+The company wants to answer questions such as:
+
+- Which customers are most likely to churn?
+- Which subscription plans have the highest churn?
+- How do contracts influence customer retention?
+- Which regions require immediate attention?
+- Which business factors contribute the most to churn?
+- How much revenue is at risk due to customer churn?
+
+---
+
+# 📂 Dataset
+
+The project uses a synthetic telecom subscription database containing realistic customer information.
+
+### Database Tables
+
+| Table | Description |
+|--------|-------------|
+| **db_customer** | Customer demographics |
+| **db_subscription** | Subscription & billing details |
+| **db_support** | Customer support history |
+
+### Dataset Size
+
+| Metric | Value |
+|---------|-------|
+| Customers | **1,200** |
+| Subscriptions | **1,200** |
+| Support Tickets | **574** |
+
+---
+
+# ⚙️ Technologies Used
 
 - Python
-- Jupyter Notebook
-
-### Python Libraries
-
 - Pandas
 - NumPy
+- SQLite
 - Matplotlib
 - Seaborn
-- Scikit-Learn
+- Scikit-learn
+- Jupyter Notebook
 
 ---
 
-## 📊 Project Workflow
+# 🧹 Data Cleaning
 
-### 1. Data Collection
+The dataset was cleaned by performing:
 
-- Imported customer churn dataset
-
-### 2. Data Cleaning
-
-- Removed duplicate values
-- Handled missing values
-- Converted data types
-- Checked data consistency
-
-### 3. Exploratory Data Analysis (EDA)
-
-Performed analysis on:
-
-- Customer Demographics
-- Contract Types
-- Internet Services
-- Payment Methods
-- Monthly Charges
-- Total Charges
-- Customer Tenure
-
-### 4. Data Visualization
-
-Created multiple visualizations using Matplotlib and Seaborn to understand customer behavior.
+- Missing value treatment
+- Duplicate removal
+- Country standardization
+- Gender normalization
+- Datatype conversions
+- Feature engineering
+- Table merging
+- Churn label creation
 
 ---
 
-# 📈 Visualizations
+# 📈 Business KPIs
 
-### Customer Churn Distribution
+The analysis includes:
 
-<p align="center">
-<img src="images/churn_distribution.png" width="700">
-</p>
-
----
-
-### Correlation Heatmap
-
-<p align="center">
-<img src="images/correlation_heatmap.png" width="700">
-</p>
-
----
-
-### Monthly Charges vs Churn
-
-<p align="center">
-<img src="images/monthlycharges_vs_churn.png" width="700">
-</p>
+- Overall Churn Rate
+- Customer Retention Rate
+- Average Revenue Per User (ARPU)
+- Revenue at Risk
+- Average Customer Tenure
+- Churn by Subscription Plan
+- Churn by Contract Type
+- Escalation Rate
+- Complaint Analysis
+- High-Value Customers at Risk
+- Churn Risk Segmentation
+- State-wise Churn Analysis
 
 ---
 
-### Tenure vs Churn
+# 📊 Visualizations
 
-<p align="center">
-<img src="images/tenure_vs_churn.png" width="700">
-</p>
+The notebook contains multiple business-focused visualizations including:
 
----
-
-## 🔍 Key Insights
-
-- Customers with month-to-month contracts have a significantly higher churn rate.
-- Customers with longer tenure are less likely to churn.
-- Higher monthly charges are associated with increased churn probability.
-- Fiber Optic internet users show relatively higher churn.
-- Electronic Check payment method has a higher churn percentage.
-- Customers using long-term contracts are more likely to stay with the company.
-- Senior citizens exhibit a slightly higher churn rate.
-- Customer retention improves as service duration increases.
+- Monthly Churn Trend
+- Churn by Subscription Plan
+- Churn by Contract Type
+- State-wise Churn Analysis
+- Correlation Heatmap
+- Customer Segmentation
+- Executive Dashboard
+- Revenue Impact Analysis
 
 ---
 
-## 💼 Business Recommendations
+# 🤖 Machine Learning
 
-- Offer discounts on yearly and two-year contracts.
-- Improve customer onboarding during the first few months.
-- Introduce loyalty rewards for long-term customers.
-- Provide personalized retention offers to high-risk customers.
-- Review pricing strategy for customers with high monthly charges.
-- Improve customer support for Fiber Optic users.
-- Build targeted retention campaigns based on customer segments.
+A Logistic Regression model was developed to predict customer churn.
+
+### Workflow
+
+- Feature Selection
+- Label Encoding
+- Train/Test Split
+- Feature Scaling
+- Logistic Regression
+- Model Evaluation
+- Feature Importance Analysis
+
+### Model Performance
+
+| Metric | Score |
+|---------|-------|
+| Accuracy | **87%** |
 
 ---
 
-## 📁 Project Structure
+# 📊 Key Insights
+
+- Monthly contracts have significantly higher churn than annual contracts.
+- Basic plan customers are more likely to churn.
+- Customers with support escalations show higher churn probability.
+- Short customer tenure strongly correlates with churn.
+- High-value customers contribute the largest revenue risk.
+
+---
+
+# 💡 Business Recommendations
+
+- Offer discounts for annual subscriptions.
+- Build retention campaigns for high-risk customers.
+- Reduce customer support response time.
+- Monitor customers with repeated escalations.
+- Create personalized offers for premium customers.
+
+---
+
+# 📁 Project Structure
 
 ```
-
-customer-churn-analysis/
+Customer-Churn-Analysis/
 │
-├── Customer\_Churn\_Analysis.ipynb
+├── churn_analysis.ipynb
+├── customer_churn.db
 ├── README.md
 ├── requirements.txt
-│
-├── data/
-│   └── customer_churn.csv
-│
 └── images/
-├── churn_distribution.png
-├── correlation_heatmap.png
-├── tenure_vs_churn.png
-└── monthlycharges_vs_churn.png
-
 ```
 
 ---
 
-## 🚀 Future Improvements
+# 📸 Dashboard Preview
 
-- Build a Machine Learning model to predict customer churn
-- Deploy an interactive Power BI dashboard
-- Perform Feature Engineering
-- Compare multiple Machine Learning algorithms
-- Deploy the project as a web application
+> Add screenshots here after uploading them.
 
----
-
-## 📌 Requirements
-
-Install required libraries using:
-
-```bash
-pip install -r requirements.txt
+```
+images/dashboard.png
+images/model.png
+images/heatmap.png
 ```
 
 ---
 
-## ▶️ How to Run
+# 🚀 How to Run
 
 ```bash
-git clone https://github.com/HdS2005/customer-churn-analysis.git
+git clone https://github.com/yourusername/customer-churn-analysis.git
 
 cd customer-churn-analysis
+
+pip install -r requirements.txt
 
 jupyter notebook
 ```
 
+Open:
+
+```
+churn_analysis.ipynb
+```
+
+Run all cells.
+
 ---
 
-## 📬 Contact
+# 📌 Future Improvements
+
+- XGBoost Model
+- Random Forest Comparison
+- Interactive Dashboard
+- Power BI Dashboard
+- Streamlit Deployment
+- Customer Lifetime Value Forecasting
+
+---
+
+# 👨‍💻 Author
 
 **Harshdeep Singh**
 
-📧 Email: harshdeepsingh4694@gmail.com
+B.Tech Computer Science
 
-💼 LinkedIn: https://www.linkedin.com/in/harshdeep-singh07/
+Aspiring Data Analyst
 
 ---
 

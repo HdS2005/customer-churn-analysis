@@ -1,6 +1,3 @@
-[README (1).md](https://github.com/user-attachments/files/30101336/README.1.md)
-<div align="center">
-
 # 📉Customer Churn Intelligence
 
 **End-to-end churn analytics: data cleaning → KPIs → prediction model → live dashboard**

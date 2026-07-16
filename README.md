@@ -1,238 +1,191 @@
-# 📊 Customer Churn Analysis & Prediction
+[README (1).md](https://github.com/user-attachments/files/30101336/README.1.md)
+<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
-![Scikit Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)
-![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-success?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
+# 📉 Retently — Customer Churn Intelligence
 
----
+**End-to-end churn analytics: data cleaning → KPIs → prediction model → live dashboard**
 
-## 📌 Project Overview
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Wrangling-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-Logistic%20Regression-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-Database-07405E?style=flat-square&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](#license)
 
-Customer churn is one of the biggest challenges for subscription-based businesses. Losing existing customers directly impacts revenue and long-term growth.
+</div>
 
-This project analyzes customer behavior, identifies major churn drivers, visualizes business insights, and builds a machine learning model capable of predicting customer churn.
+<br>
 
-The complete workflow includes:
+<div align="center">
+  <img src="assets/dashboard_preview.png" alt="Retently — Churn Intelligence Dashboard" width="100%">
+</div>
 
-- Data Cleaning
-- Data Preparation
-- Exploratory Data Analysis
-- Business KPI Analysis
-- Customer Segmentation
-- Churn Prediction using Machine Learning
-- Business Recommendations
+<br>
 
----
+## ✨ What is this?
 
-# 🎯 Business Problem
+**Retently** analyzes subscription behavior for **1,200 customers** to answer three questions every subscription business asks:
 
-The company wants to answer questions such as:
+1. **Who's churning, and why?** — data cleaning, feature engineering & 12 business KPIs
+2. **Who's about to churn?** — a Logistic Regression model with **87.1% accuracy**
+3. **How do I keep watch?** — a fully interactive analytics dashboard built from scratch
 
-- Which customers are most likely to churn?
-- Which subscription plans have the highest churn?
-- How do contracts influence customer retention?
-- Which regions require immediate attention?
-- Which business factors contribute the most to churn?
-- How much revenue is at risk due to customer churn?
+No black boxes. Every number on the dashboard traces back to a real query on the underlying SQLite database.
 
----
+<br>
 
-# 📂 Dataset
+## 🚀 Highlights
 
-The project uses a synthetic telecom subscription database containing realistic customer information.
+| | |
+|---|---|
+| 🎯 **Churn Rate** | 32.2% overall · 38.4% on Basic plan vs 24.0% on Premium |
+| 💰 **Revenue at Risk** | ₹4.7K/month tied up in churned accounts |
+| 🧠 **Prediction Model** | Logistic Regression · **87.1% accuracy** · balanced precision/recall |
+| ⚠️ **High-Value At Risk** | 25 premium accounts flagged · ₹489/month exposure |
+| 📊 **Top Churn Drivers** | Short tenure → Low lifetime value → High monthly charges → Monthly contract |
 
-### Database Tables
+<br>
 
-| Table | Description |
-|--------|-------------|
-| **db_customer** | Customer demographics |
-| **db_subscription** | Subscription & billing details |
-| **db_support** | Customer support history |
+## 🖥️ Live Dashboard
 
-### Dataset Size
+The dashboard isn't just a static mockup — every control actually works:
 
-| Metric | Value |
-|---------|-------|
-| Customers | **1,200** |
-| Subscriptions | **1,200** |
-| Support Tickets | **574** |
+- 🔍 **Live search** — filters the at-risk accounts table as you type (`⌘K` / `Ctrl+K` to focus)
+- 📥 **Real CSV export** — one click downloads the current at-risk account list
+- 🌗 **Dark / light theme toggle** — charts re-render with the new palette
+- 🔔 **Notification center** — clear alerts, scroll-to-panel on click
+- 🔄 **Refresh** — replays every animation: count-up KPIs, donut draw-in, line-chart draw-in
 
----
+Open `churn_dashboard.html` directly in any browser — no server required.
 
-# ⚙️ Technologies Used
+<br>
 
-- Python
-- Pandas
-- NumPy
-- SQLite
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
+## 📊 Key Insights
 
----
+<table>
+<tr><td>
 
-# 🧹 Data Cleaning
+**Customer Base**
+- 1,200 total customers tracked
+- 813 active · 387 churned
+- Data spans 2018–2026
 
-The dataset was cleaned by performing:
+</td><td>
 
-- Missing value treatment
-- Duplicate removal
-- Country standardization
-- Gender normalization
-- Datatype conversions
-- Feature engineering
-- Table merging
-- Churn label creation
+**Revenue**
+- ARPU: ₹13.13
+- Premium: ₹21.91 avg · Basic: ₹7.19 avg
+- 574 support interactions logged
 
----
+</td></tr>
+<tr><td>
 
-# 📈 Business KPIs
+**Risk Segmentation**
+- 707 Low risk
+- 258 Medium risk
+- 235 High risk
 
-The analysis includes:
+</td><td>
 
-- Overall Churn Rate
-- Customer Retention Rate
-- Average Revenue Per User (ARPU)
-- Revenue at Risk
-- Average Customer Tenure
-- Churn by Subscription Plan
-- Churn by Contract Type
-- Escalation Rate
-- Complaint Analysis
-- High-Value Customers at Risk
-- Churn Risk Segmentation
-- State-wise Churn Analysis
+**Support & Escalations**
+- 6.4% escalation rate
+- 0.48 avg complaints/user
+- +0.12 correlation: escalations ↔ churn
 
----
+</td></tr>
+</table>
 
-# 📊 Visualizations
+<br>
 
-The notebook contains multiple business-focused visualizations including:
+## 🧠 Churn Prediction Model
 
-- Monthly Churn Trend
-- Churn by Subscription Plan
-- Churn by Contract Type
-- State-wise Churn Analysis
-- Correlation Heatmap
-- Customer Segmentation
-- Executive Dashboard
-- Revenue Impact Analysis
+A Logistic Regression classifier trained on genuine pre-cancellation signals only — `churn_score` and `churn_risk` were deliberately excluded since they're themselves churn-derived (no data leakage).
 
----
-
-# 🤖 Machine Learning
-
-A Logistic Regression model was developed to predict customer churn.
-
-### Workflow
-
-- Feature Selection
-- Label Encoding
-- Train/Test Split
-- Feature Scaling
-- Logistic Regression
-- Model Evaluation
-- Feature Importance Analysis
-
-### Model Performance
+**Features used:** plan type, contract type, gender, monthly charges, CLTV, tenure, escalations, complaint count
 
 | Metric | Score |
-|---------|-------|
-| Accuracy | **87%** |
+|---|---|
+| Accuracy | 87.1% |
+| Precision (Churned) | 0.83 |
+| Recall (Churned) | 0.75 |
+| F1-score (Churned) | 0.79 |
 
----
+**Strongest churn drivers** (by model coefficient magnitude): short tenure, low CLTV, high monthly charges, and monthly (vs. annual) contracts.
 
-# 📊 Key Insights
+<br>
 
-- Monthly contracts have significantly higher churn than annual contracts.
-- Basic plan customers are more likely to churn.
-- Customers with support escalations show higher churn probability.
-- Short customer tenure strongly correlates with churn.
-- High-value customers contribute the largest revenue risk.
+## 🛠️ Tech Stack
 
----
+**Analysis:** Python · Pandas · NumPy · Matplotlib · Seaborn · scikit-learn · Jupyter Notebook
+**Data:** SQLite (3 relational tables — customer, subscription, support)
+**Dashboard:** Vanilla HTML / CSS / JavaScript — hand-built SVG charts, zero chart libraries, zero dependencies
 
-# 💡 Business Recommendations
+<br>
 
-- Offer discounts for annual subscriptions.
-- Build retention campaigns for high-risk customers.
-- Reduce customer support response time.
-- Monitor customers with repeated escalations.
-- Create personalized offers for premium customers.
-
----
-
-# 📁 Project Structure
+## 📁 Project Structure
 
 ```
-Customer-Churn-Analysis/
-│
-├── churn_analysis.ipynb
-├── customer_churn.db
+retently-churn-analysis/
 ├── README.md
-├── requirements.txt
-└── images/
+├── customer_churn.db          # SQLite database (customer / subscription / support)
+├── churn_analysis.ipynb       # Full analysis: cleaning → KPIs → viz → model
+├── churn_dashboard.html       # Interactive dashboard (open directly in browser)
+└── assets/
+    └── dashboard_preview.png
 ```
 
----
+<br>
 
-# 📸 Dashboard Preview
-
-> Add screenshots here after uploading them.
-
-```
-images/dashboard.png
-images/model.png
-images/heatmap.png
-```
-
----
-
-# 🚀 How to Run
+## ▶️ Getting Started
 
 ```bash
-git clone https://github.com/yourusername/customer-churn-analysis.git
+# clone the repo
+git clone https://github.com/<your-username>/retently-churn-analysis.git
+cd retently-churn-analysis
 
-cd customer-churn-analysis
+# install dependencies
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 
-pip install -r requirements.txt
-
-jupyter notebook
+# run the analysis
+jupyter notebook churn_analysis.ipynb
 ```
 
-Open:
+To view the dashboard, just open `churn_dashboard.html` in your browser — that's it.
 
-```
-churn_analysis.ipynb
-```
+<br>
 
-Run all cells.
+## 🗂️ Dataset Schema
 
----
+| Table | Description |
+|---|---|
+| `db_customer` | Demographics — name, gender, country, state, DOB |
+| `db_subscription` | Plan, contract type, charges, cancellation date/reason, CLTV, churn score |
+| `db_support` | Complaint history, escalation flag, CSAT score |
 
-# 📌 Future Improvements
+<br>
 
-- XGBoost Model
-- Random Forest Comparison
-- Interactive Dashboard
-- Power BI Dashboard
-- Streamlit Deployment
-- Customer Lifetime Value Forecasting
+## 🔮 Future Improvements
 
----
+- [ ] Deploy the dashboard live (GitHub Pages / Vercel)
+- [ ] Add cohort-based retention curves
+- [ ] Experiment with tree-based models (Random Forest, XGBoost) for comparison
+- [ ] Wire the dashboard to a live API instead of static data
 
-# 👨‍💻 Author
+<br>
 
-**Harshdeep Singh**
+## 📬 Connect
 
-B.Tech Computer Science
+Built by **Harsh** · Final-year CS student · Applied GenAI/LLM Developer
 
-Aspiring Data Analyst
+Feel free to fork this, break it, and make it your own.
 
----
+<br>
 
-## ⭐ If you found this project useful, consider giving it a star.
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+<div align="center">
+
+⭐ **If this project helped you, consider giving it a star!** ⭐
+
+</div>
